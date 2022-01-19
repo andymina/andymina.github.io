@@ -1,0 +1,12 @@
+#coding-game {
+  height: 600px;
+  /* background-color: red; */
+}
+
+#sketch-container {
+  height: 600px;
+}
+
+.CodeMirror {
+  height: 600px;
+}

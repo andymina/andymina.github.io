@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- LOAD CSS -->
+    <div>
+      <!-- BOOTSTRAP -->
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+        crossorigin="anonymous"
+      />
+      <!-- CODE MIRROR -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.css"
+        integrity="sha512-CCnciBUnVXwa6IQT9q8EmGcarNit9GdKI5nJnj56B1iu0LuD13Qn/GZ+IUkrZROZaBdutN718NK6mIXdUjZGqg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+      <!-- CODE MIRROR BASE16-DARK -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/theme/base16-dark.min.css"
+        integrity="sha512-CNZkbIVu/G4dB3YpFIZgMtE45vHp/QocgMbf6jg+DFFPLN3emncIob8ubKANmsGQ8JsnzzSVTj7WrFrnx6EgXQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+      <!-- CODE MIRROR SIMPLE SCROLLBAR -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/addon/scroll/simplescrollbars.min.css"
+        integrity="sha512-2y3NTsei81d5emn5nwrdflyI5EGULwKXRZ0BCbO55cjgQ8x62X4ydH/jbnzrKnxArstf79F9n6z1j2MtVmJ8YA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+      <!-- STYLES -->
+      <link rel="stylesheet" href="styles.css">
+    </div>
+  </head>
+  <body>
+    <h1>Hello world!</h1>   
+
+    <section id="coding-game" class="container">
+      <div class="row">
+        <div class="col-6">
+          <textarea id="code-editor"></textarea>
+        </div>        
+        <div id="sketch-container" class="col-6"></div>
+      </div>
+    </section>
+
+    <button onclick="executeCode()">Submit</button>
+    <h1 id="code-errors"></h1>
+
+    <!-- LOAD SCRIPTS -->
+    <div>
+      <!-- BOOTSTRAP -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"
+      ></script>
+      <!-- JQUERY -->
+      <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"
+      ></script>
+      <!-- P5.JS -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"
+      ></script>
+      <!-- CODE MIRROR -->
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.js"
+        integrity="sha512-JpMCZgesTWh1iu/8ujURbwkJBgbgFWe3sTNCHdIuEvPwZuuN0nTUr2yawXahpgdEK7FOZUlW254Rp7AyDYJdjg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <!-- CODE MIRROR JS MODE -->
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/javascript/javascript.min.js"
+        integrity="sha512-DJ/Flq7rxJDDhgkO49H/rmidX44jmxWot/ku3c+XXEF9XFal78KIpu7w6jEaQhK4jli1U3/yOH+Rp3cIIEYFPQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <!-- CODE MIRROR COMMENTS -->
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/addon/comment/comment.min.js"
+        integrity="sha512-U0udq4Tvwzb+OiL6f7aak/n07mlIutTl+pEPtKoK0oOTF4Q9SkLOQYvKpIaCIM8CKTufd7szgeN9VDcgXDVvWg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <!-- CODE MIRROR SCROLLBAR -->
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/addon/scroll/simplescrollbars.min.js"
+        integrity="sha512-HbaqNZHZLix+FaENPr62o07Q2G46VYUDCLZyxo5fPE0lN1EIpncArGlznYfLu+q0Vy7eTR+EBcW23FypU+Jqpw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <!-- CODE MIRROR MARK SELECTION -->
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/addon/selection/mark-selection.min.js"
+        integrity="sha512-aXjUoHbqle1lI5soSDU7OwjhVGBmenxiMyvaIEGI6mZUUyzSdxuqB1BrttHOSUa3/FenY6+qdZXNWkl0iy/x4g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <!-- CODE MIRROR CLOSE BRACKETS -->
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/addon/edit/closebrackets.min.js"
+        integrity="sha512-cCnOU69ESswPmMV3f9TR7WgctoJZliqGbJ8WeLn0VlUrngSsmtVopRf6OG/epbURGfNmY4RY6RzZ/mWkPQ/onw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <!-- CODE MIRROR MATCH BR -->
+      <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/addon/edit/matchbrackets.min.js"
+        integrity="sha512-03Ei8A+mDhwF6O/CmXM47U4A9L7TobAxMbPV2Wn5cEbY76lngHQRyvvmnqhJ8IthfoxrRqmtoBxQCxOC7AOeKw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <!-- CODE MIRROR RUNMODE -->
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/addon/runmode/runmode.min.js"
+        integrity="sha512-uGLOqECti91iIJUClXd1nyZ4QtjscIitvdEApH2mX4AkmrpglCi6bdaF8sJhB3U2AkYKB1z1LIg3VP3OJImzMQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <!-- INDEX -->
+      <script src="js/index.js"></script>
+      <!-- SKETCH -->
+      <script src="js/game/sketch.js"></script>
+    </div>
+  </body>
+</html>
