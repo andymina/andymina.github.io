@@ -32,7 +32,7 @@ let editor = CodeMirror.fromTextArea($("#code-editor")[0], {
 
 const executeCode = () => {
   try {
-    Function(`"use strict";${editor.getValue()}`)();
+    window.Function(`"use strict";${editor.getValue()}`)();
   } catch (err) {
     $("#code-errors").text(err);
   }

@@ -52,6 +52,10 @@
 
     <button onclick="executeCode()">Run Code</button>
     <button onclick="reset()">Reset</button>
+    <button onclick="loadLVL(0)">Load Sandbox</button>
+    <button onclick="loadLVL(1)">Load Level 1</button>
+    <button onclick="loadLVL(2)">Load Level 2</button>
+    <button onclick="loadLVL(3)">Load Level 3</button>
     <h1 id="code-errors"></h1>
 
     <!-- LOAD SCRIPTS -->
@@ -128,6 +132,9 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
       ></script>
+      <!-- GAME LOGIC -->
+      <script src="js/game/Sprites.js"></script>
+      <script src="js/game/Game.js"></script>
       <!-- SKETCH -->
       <script src="js/game/sketch.js"></script>
       <!-- INDEX -->
