@@ -10,3 +10,7 @@
 .CodeMirror {
   height: 600px;
 }
+
+.cm-style1 {
+  color: lightskyblue !important;
+}
