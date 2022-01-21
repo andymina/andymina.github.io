@@ -6,8 +6,7 @@ class Game {
     this.canvas = createCanvas(600, 600).parent("sketch-container");
     this.bgImg = bgImg;
 
-    // game setup   
-    this.baseURL = "http://localhost:5500";  
+    // game setup  
     this.astroImg = astroImg;
     this.alienImg = alienImg;
     this.rockImg = rockImg;
