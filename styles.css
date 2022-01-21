@@ -1,3 +1,4 @@
+/* UTILITIES */
 @font-face {
   font-family: NASA;
   src: url("assets/fonts/NASA.otf");
@@ -7,20 +8,12 @@
   font-family: NASA;
 }
 
-body {
-  margin-top: 10vh;
+/* #region HOME */
+#home {
+  height: 100vh;
 }
 
-.navbar {
-  height: 10vh;
-}
-
-.navbar-brand {
-  font-family: NASA;
-  color: red !important;
-  font-size: 2em;
-}
-
+/* NAVBAR */
 .nav-link {
   font-family: NASA;
   color: black !important;
@@ -31,15 +24,10 @@ body {
   color: red !important;
 }
 
-section {
-  margin-top: -10vh;
-  padding-top: 10vh;
-  height: 100vh; /* @TODO REMOVE THIS */
-}
-
-#home {
+/* LANDING */
+#landing { 
   background: fixed no-repeat center/cover url("assets/imgs/bg.jpeg");
-  height: 100vh;
+  height: 100%;
 }
 
 .mirror {
@@ -49,11 +37,17 @@ section {
   -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, 
   from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
 }
+/* #endregion */
 
+/* #region ABOUT US */
 #about-us {
-  /* background-color: red; */
 }
+/* #endregion */
 
+/* #region JOIN THE MISSION */
+/* #endregion */
+
+/* #region CODING CHALLENGE */
 #coding-game {
   height: 600px;
 }
@@ -69,3 +63,4 @@ section {
 .cm-style1 {
   color: lightskyblue !important;
 }
+/* #endregion */

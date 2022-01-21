@@ -38,61 +38,97 @@
       <link rel="stylesheet" href="styles.css">
     </div>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Explore Nasa</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
   </head>
   <body>
-    <!-- NAVBAR -->
-    <nav class="navbar shadow-lg fixed-top navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#home">EXPLORE NASA INC.</a>
-
-        <button
-          class="navbar-toggler" type="button"
-          data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link" href="#about-us">About Us</a>
-            <a class="nav-link" href="#join-us">Join the Mission</a>
-            <a class="nav-link" href="#coding">Coding Challenge</a>
-            <a class="nav-link" href="#gallery">Gallery</a>
+    <section id="home">
+      <!-- NAVBAR -->
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light shadow-lg">
+        <div class="container">
+          <!-- BRAND -->
+          <a class="navbar-brand text-wrap ft-nasa text-danger fs-2" href="#home">EXPLORE NASA INC.</a>
+          <!-- TOGGLER -->
+          <button
+            class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- NAVBAR -->
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav me-auto mb-2 mb-lg-0">
+              <a class="nav-link" href="#about-us">About Us</a>
+              <div class="vr"></div>
+              <a class="nav-link" href="#join-us">Join the Mission</a>
+              <div class="vr"></div>
+              <a class="nav-link" href="#coding">Coding Challenge</a>
+              <div class="vr"></div>
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <!-- HOME -->
-    <section id="home" class="container-fluid">      
-      <div class="row">
-        <h1 class="col-12 display-1 text-light text-center mt-5 p-2 ft-nasa">
-          The future is waiting for <em style="color: red;">you</em>.
-        </h1>
+      <!-- HOME -->
+      <section id="landing" class="container-fluid">      
+        <div class="container">
+          <div class="row">
+            <h1 class="col-12 display-1 text-light text-center mt-5 p-2 ft-nasa">
+              The future is waiting for <em style="color: red;">you</em>.
+            </h1>
+          </div>
+          <div class="row">
+            <h1 class="col-12 display-1 text-light text-center mirror ft-nasa">
+              The future is waiting for <em style="color: red;">you</em>.
+            </h1>
+          </div>
       </div>
-      <div class="row">
-        <h1 class="col-12 display-1 text-light text-center mirror ft-nasa">
-          The future is waiting for <em style="color: red;">you</em>.
-        </h1>
-      </div>
+      </section>
     </section>
 
     <!-- ABOUT US -->
-    <section id="about-us">
-      <div class="bg-danger m-0 p-0">
+    <section id="about-us" class="container-fluid bg-light py-4">
         <div class="container">
           <div class="row">
-          <div class="col-6">
-            <h1 class="display-4 ft-nasa">Who are we?</h1>
+            <h1 class="display-4 ft-nasa text-center my-0">Who are we?</h1>
+            <hr class="w-50 mx-auto pb-1 my-2"/>
           </div>
-          <div class="col-6">
-            <p>these are words.</p>
+
+          <div class="row">
+            <p class="fs-3 lead text-wrap">
+              We believe that NASA has something for every student and we're here to help you find
+              it. As a partner program with NASA, our goal is to help students discover space in
+              the ways that interest them. Whether you like robotics, medicine, or graphic
+              design, there's a community here for you.
+            </p>
           </div>
+
+          <div class="row h-100">
+            <div class="my-auto col-6">
+              <p class="fs-3 lead text-wrap">
+                College students of all majors are welcome to join Explore NASA's summer
+                internship program: Space Rangers. High school students are encouraged to our
+                introductory summer internship: Space Cadets. Check out testimonials from interns
+                placed through Explore NASA.
+              </p>
+            </div>
+            <div class="my-auto col-6">
+              <div class="ratio ratio-16x9">
+                <iframe
+                  src="https://www.youtube.com/embed/63AK3H7BK6g"
+                  title="YouTube video player"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+
           </div>
         </div>
-      </div>
     </section>
 
     <!-- JOIN US -->
