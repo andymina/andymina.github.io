@@ -1,6 +1,6 @@
 let game;
 let bgImg, astroImg, alienImg, rockImg;
-let baseURL = "http://localhost:5500";
+let baseURL = "https://andymina.github.io/explore-nasa";
 
 // p5js preload
 function preload() {
