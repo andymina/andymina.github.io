@@ -1,6 +1,61 @@
+@font-face {
+  font-family: NASA;
+  src: url("assets/fonts/NASA.otf");
+}
+
+.ft-nasa {
+  font-family: NASA;
+}
+
+body {
+  margin-top: 10vh;
+}
+
+.navbar {
+  height: 10vh;
+}
+
+.navbar-brand {
+  font-family: NASA;
+  color: red !important;
+  font-size: 2em;
+}
+
+.nav-link {
+  font-family: NASA;
+  color: black !important;
+  margin: 0 5px;
+}
+
+.nav-link:hover {
+  color: red !important;
+}
+
+section {
+  margin-top: -10vh;
+  padding-top: 10vh;
+  height: 100vh; /* @TODO REMOVE THIS */
+}
+
+#home {
+  background: fixed no-repeat center/cover url("assets/imgs/bg.jpeg");
+  height: 100vh;
+}
+
+.mirror {
+  transform: scaleY(-1);
+  rotate: 180deg;
+  opacity: 0.1;
+  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, 
+  from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+#about-us {
+  /* background-color: red; */
+}
+
 #coding-game {
   height: 600px;
-  /* background-color: red; */
 }
 
 #sketch-container {

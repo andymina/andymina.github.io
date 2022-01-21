@@ -4,10 +4,10 @@ let baseURL = "http://localhost:5500";
 
 // p5js preload
 function preload() {
-  bgImg = loadImage(`${baseURL}/assets/bg.png`);
-  astroImg = loadImage(`${baseURL}/assets/astro.png`);
-  alienImg = loadImage(`${baseURL}/assets/alien.png`);
-  rockImg = loadImage(`${baseURL}/assets/rock.png`);
+  bgImg = loadImage(`${baseURL}/assets/game/bg.png`);
+  astroImg = loadImage(`${baseURL}/assets/game/astro.png`);
+  alienImg = loadImage(`${baseURL}/assets/game/alien.png`);
+  rockImg = loadImage(`${baseURL}/assets/game/rock.png`);
 };
 
 // p5js setup
