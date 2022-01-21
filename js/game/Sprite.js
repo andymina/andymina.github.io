@@ -22,25 +22,3 @@ class Sprite {
     imageMode(CORNER);
   }
 }
-
-class Astro extends Sprite {
-  moveUp() {
-    if (this.y !== 0)
-      this.y -= 1;
-  }
-
-  moveDown() {
-    if (this.y !== 4)
-      this.y += 1;
-  }
-
-  moveLeft() {
-    if (this.x !== 0)
-      this.x -= 1;
-  }
-
-  moveRight() {
-    if (this.x !== 4)
-      this.x += 1;
-  }
-}

@@ -16,6 +16,7 @@ function setup() {
   rectMode(CENTER);
   strokeWeight(2);
   frameRate(game.fps);
+  noLoop(); // draw once and stop
 };
 
 function draw() {
@@ -23,8 +24,8 @@ function draw() {
 }
 
 // user facing
-const loadLVL = (lvl) => game.loadLVL(lvl);
-const reset = () => game.resetPlayer();
+const loadLVL = (lvl) => { game.loadLVL(lvl); redraw(); }
+const reset = () => { game.resetPlayer(); redraw(); };
 const moveUp = () => game.cmdQueue.push("u");
 const moveDown = () => game.cmdQueue.push("d");
 const moveLeft = () => game.cmdQueue.push("l");

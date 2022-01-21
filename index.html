@@ -50,12 +50,12 @@
       </div>
     </section>
 
-    <button onclick="executeCode()">Run Code</button>
-    <button onclick="reset()">Reset</button>
-    <button onclick="loadLVL(0)">Load Sandbox</button>
-    <button onclick="loadLVL(1)">Load Level 1</button>
-    <button onclick="loadLVL(2)">Load Level 2</button>
-    <button onclick="loadLVL(3)">Load Level 3</button>
+    <button id="run-btn" onclick="executeCode()">Run Code</button>
+    <button id="reset-btn" onclick="reset()">Reset</button>
+    <button id="lvl0-btn" onclick="loadLVL(0)">Load Sandbox</button>
+    <button id="lvl1-btn" onclick="loadLVL(1)">Load Level 1</button>
+    <button id="lvl2-btn" onclick="loadLVL(2)">Load Level 2</button>
+    <button id="lvl3-btn" onclick="loadLVL(3)">Load Level 3</button>
     <h1 id="code-errors"></h1>
 
     <!-- LOAD SCRIPTS -->
@@ -133,7 +133,7 @@
         referrerpolicy="no-referrer"
       ></script>
       <!-- GAME LOGIC -->
-      <script src="js/game/Sprites.js"></script>
+      <script src="js/game/Sprite.js"></script>
       <script src="js/game/Game.js"></script>
       <!-- SKETCH -->
       <script src="js/game/sketch.js"></script>
