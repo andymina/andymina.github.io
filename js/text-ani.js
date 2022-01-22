@@ -5,7 +5,9 @@ $("document").ready(() => {
   const typeWriter = (currentStr, text, i, cb, isRed) => {
     if (i < text.length) {
       if (text[i] === " ") {
-        currentStr += "&nbsp";
+        // cant add nbsp bc line won't break
+        // add two punctuation spaces for fix
+        currentStr += "&#8200;";
       } else if (text[i] === "y") {
         // flag red if y
         isRed = true;
@@ -20,7 +22,7 @@ $("document").ready(() => {
       }
 
       // update the html
-      $(".typewriter").html(`${currentStr}${isRed ? "</em>" : ""}<span aria-hidden="true"></span>`);
+      $(".typewriter").html(`${currentStr}${isRed ? "</em>" : ""}<span id="cursor" aria-hidden="true"></span>`);
 
       // wait and recurse for next char
       setTimeout(() => typeWriter(currentStr, text, i + 1, cb, isRed), 100);

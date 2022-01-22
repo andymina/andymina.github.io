@@ -14,20 +14,20 @@
 
 .hr-dark {
   border-radius: 5px;
-  color: black !important;
+  color: #212529 !important;
   opacity: 1;
   box-shadow: 2px 2px 2px darkgray;
 }
 
 .text-shadow-light {
-  text-shadow: 2px 2px 10px black;
+  text-shadow: 2px 2px 2px black;
 }
 
 .hr-light {
   border-radius: 5px;
-  color: white !important;
+  color: #f8f9fa !important;
   opacity: 1;
-  box-shadow: 2px 2px 10px black;
+  box-shadow: 2px 2px 2px black;
 }
 /* #endregion */
 
@@ -60,7 +60,7 @@
   from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
 }
 
-span {
+#cursor {
   border-right: .05em solid;
   animation: caret 1s steps(1) infinite;
 }
