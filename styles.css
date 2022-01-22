@@ -59,6 +59,17 @@
   -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, 
   from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
 }
+
+span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
 /* #endregion */
 
 /* #region ABOUT US */
