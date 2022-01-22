@@ -1,4 +1,4 @@
-/* UTILITIES */
+/* #region UTILITIES */
 @font-face {
   font-family: NASA;
   src: url("assets/fonts/NASA.otf");
@@ -7,6 +7,29 @@
 .ft-nasa {
   font-family: NASA;
 }
+
+.text-shadow {
+  text-shadow: 2px 2px 2px darkgray;
+}
+
+.hr-dark {
+  border-radius: 5px;
+  color: black !important;
+  opacity: 1;
+  box-shadow: 2px 2px 2px darkgray;
+}
+
+.text-shadow-light {
+  text-shadow: 2px 2px 10px black;
+}
+
+.hr-light {
+  border-radius: 5px;
+  color: white !important;
+  opacity: 1;
+  box-shadow: 2px 2px 10px black;
+}
+/* #endregion */
 
 /* #region HOME */
 #home {
@@ -32,7 +55,6 @@
 
 .mirror {
   transform: scaleY(-1);
-  rotate: 180deg;
   opacity: 0.1;
   -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, 
   from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
@@ -40,11 +62,22 @@
 /* #endregion */
 
 /* #region ABOUT US */
-#about-us {
+#me:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }
 /* #endregion */
 
 /* #region JOIN THE MISSION */
+.iframe-shadow {
+  box-shadow: 2px 2px 10px black;
+}
+
+.iframe-shadow:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 2px 10px black;
+}
 /* #endregion */
 
 /* #region CODING CHALLENGE */

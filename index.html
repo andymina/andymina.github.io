@@ -79,12 +79,12 @@
         <div class="container">
           <div class="row">
             <h1 class="col-12 display-1 text-light text-center mt-5 p-2 ft-nasa">
-              The future is waiting for <em style="color: red;">you</em>.
+              The future needs <em style="color: red;">you</em>.
             </h1>
           </div>
           <div class="row">
             <h1 class="col-12 display-1 text-light text-center mirror ft-nasa">
-              The future is waiting for <em style="color: red;">you</em>.
+              The future needs <em style="color: red;">you</em>.
             </h1>
           </div>
       </div>
@@ -93,47 +93,72 @@
 
     <!-- ABOUT US -->
     <section id="about-us" class="container-fluid bg-light py-4">
-        <div class="container">
-          <div class="row">
-            <h1 class="display-4 ft-nasa text-center my-0">Who are we?</h1>
-            <hr class="w-50 mx-auto pb-1 my-2"/>
-          </div>
+      <div class="container">
+        <div class="row">
+          <h1 class="display-4 ft-nasa text-center my-0 text-shadow">Who are we?</h1>
+          <hr class="w-25 mx-auto pb-1 my-2 hr-dark text-shadow"/>
+        </div>
 
-          <div class="row">
+        <div class="row py-2 h-100">
+          <div class="col-lg-6 col-md-12">
+            <img id="me" class="d-block w-75 rounded shadow-lg mx-auto" src="assets/imgs/me.jpg"/>
+          </div>
+          <div class="col-lg-6 col-mg-12 py-2 my-auto">
             <p class="fs-3 lead text-wrap">
-              We believe that NASA has something for every student and we're here to help you find
-              it. As a partner program with NASA, our goal is to help students discover space in
-              the ways that interest them. Whether you like robotics, medicine, or graphic
-              design, there's a community here for you.
+              Founded by Andy Mina, avid NASA enthusiast, in 2014, Explore NASA aims
+              to have every child across the country interested in space exploration help push
+              the final frontier. Want to know more about Andy? Check out his website
+              <a href="https://andymina.com">here</a>.
             </p>
-          </div>
 
-          <div class="row h-100">
-            <div class="my-auto col-6">
-              <p class="fs-3 lead text-wrap">
-                College students of all majors are welcome to join Explore NASA's summer
-                internship program: Space Rangers. High school students are encouraged to our
-                introductory summer internship: Space Cadets. Check out testimonials from interns
-                placed through Explore NASA.
-              </p>
-            </div>
-            <div class="my-auto col-6">
-              <div class="ratio ratio-16x9">
-                <iframe
-                  src="https://www.youtube.com/embed/63AK3H7BK6g"
-                  title="YouTube video player"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen
-                ></iframe>
-              </div>
-            </div>
-
+            <em class="lead fs-3 text-wrap text-center">
+              "Our universe is a sorry little affair unless it has in it something for every age
+              to investigate."
+            </em>
+            <p class="lead fs-5 text-end">- Seneca the Younger, Natural Questions</p>
           </div>
         </div>
+      </div>
     </section>
 
     <!-- JOIN US -->
-    <section id="join-us" class="container-fluid">
+    <section id="join-us" class="container-fluid bg-dark py-4">
+      <div class="container">
+        <div class="row">
+          <h1 class="display-4 ft-nasa text-center my-0 text-shadow-light text-light">Join the Mission</h1>
+          <hr class="w-25 mx-auto pb-1 my-2 hr-light text-shadow" />
+        </div>
 
+        <div class="row py-2">
+          <p class="col-12 fs-3 lead text-wrap text-light">
+            We believe that NASA has something for all students and we're here to help you find
+            it. As a partner program with NASA, our goal is to help students discover space in
+            the ways that interest them. Whether you like robotics, medicine, or graphic
+            design, there's a community here for you. Interested in programming at NASA?
+            Take our <a href="#coding">coding challenge</a> below.
+          </p>
+        </div>
+
+        <div class="row py-2 h-100">
+          <div class="my-auto col-lg-6 col-md-12">
+            <p class="fs-3 lead text-wrap text-light">
+              College students of all majors are welcome to join Explore NASA's summer
+              internship program: Space Rangers. High school students are encouraged to our
+              introductory summer internship: Space Cadets. Check out testimonials from interns
+              placed through Explore NASA. 
+            </p>
+          </div>
+          <div class="my-auto col-lg-6 col-md-12">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/63AK3H7BK6g"
+                class="iframe-shadow"
+                title="YouTube video player"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+      </div>
     </section>
 
     <!-- CODING PRACTICE-->
@@ -145,12 +170,12 @@
         <div id="sketch-container" class="col-6"></div>
       </div>
 
-      <button id="run-btn" onclick="executeCode()">Run Code</button>
-      <button id="reset-btn" onclick="reset()">Reset</button>
-      <button id="lvl0-btn" onclick="loadLVL(0)">Load Sandbox</button>
-      <button id="lvl1-btn" onclick="loadLVL(1)">Load Level 1</button>
-      <button id="lvl2-btn" onclick="loadLVL(2)">Load Level 2</button>
-      <button id="lvl3-btn" onclick="loadLVL(3)">Load Level 3</button>
+      <button class="btn btn-primary" id="run-btn" onclick="executeCode()">Run Code</button>
+      <button class="btn btn-primary" id="reset-btn" onclick="reset()">Reset</button>
+      <button class="btn btn-primary" id="lvl0-btn" onclick="loadLVL(0)">Load Sandbox</button>
+      <button class="btn btn-primary" id="lvl1-btn" onclick="loadLVL(1)">Load Level 1</button>
+      <button class="btn btn-primary" id="lvl2-btn" onclick="loadLVL(2)">Load Level 2</button>
+      <button class="btn btn-primary" id="lvl3-btn" onclick="loadLVL(3)">Load Level 3</button>
       <h1 id="code-errors"></h1>
     </section>
 
@@ -230,6 +255,12 @@
       <script
         src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/addon/runmode/runmode.min.js"
         integrity="sha512-uGLOqECti91iIJUClXd1nyZ4QtjscIitvdEApH2mX4AkmrpglCi6bdaF8sJhB3U2AkYKB1z1LIg3VP3OJImzMQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" 
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
       ></script>
