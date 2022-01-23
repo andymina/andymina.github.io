@@ -26,14 +26,6 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
       />
-      <!-- CODE MIRROR SIMPLE SCROLLBAR -->
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/addon/scroll/simplescrollbars.min.css"
-        integrity="sha512-2y3NTsei81d5emn5nwrdflyI5EGULwKXRZ0BCbO55cjgQ8x62X4ydH/jbnzrKnxArstf79F9n6z1j2MtVmJ8YA=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-      />
       <!-- STYLES -->
       <link rel="stylesheet" href="styles.css">
     </div>
@@ -125,6 +117,7 @@
       </div>
     </section>
 
+    <!-- JOIN US -->
     <section class="bg-light">
       <svg
         class="w-full fill-current transform -translate-y-1 scale-105"
@@ -137,9 +130,8 @@
           d="M1600 0v113.868c-91.328-1.407-173.577 60.877-297.907 45.57-124.33-15.308-103.654-33.11-207.373-63.606-69.147-20.33-143.387-20.33-222.72 0-56.554 17.89-114.692 23.901-174.415 18.036-89.585-8.798-84.69-15.89-199.92-48.532-89.414-25.328-211.396-25.328-247.427-27.283-68.21-3.7-151.622 9.683-250.238 40.15V0h1600z">
         </path>
       </svg>
-      </section>
+    </section>
 
-    <!-- JOIN US -->
     <section id="join-us" class="container-fluid bg-dark py-4">
       <div class="container">
         <div class="row">
@@ -163,7 +155,7 @@
               College students of all majors are welcome to join Explore NASA's summer
               internship program: Space Rangers. High school students are encouraged to our
               introductory summer internship: Space Cadets. Check out testimonials from interns
-              placed through Explore NASA. 
+              placed through Explore NASA in this video.
             </p>
           </div>
           <div class="my-auto col-lg-6 col-md-12">
@@ -195,21 +187,45 @@
 
     <!-- CODING PRACTICE-->
     <section id="coding" class="container-fluid bg-light">
-      <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-12">
-          <textarea id="code-editor"></textarea>
-        </div>        
-        <div id="sketch-container" class="col-6"></div>
-      </div>
+      <div class="container d-none d-lg-block">
+        <!-- SKETCH AND CODE -->
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <!-- CODE -->
+            <div class="row h-75 mx-auto mw-100">
+              <textarea id="code-editor"></textarea>
+            </div>
 
-      <button class="btn btn-primary" id="run-btn" onclick="executeCode()">Run Code</button>
-      <button class="btn btn-primary" id="reset-btn" onclick="reset()">Reset</button>
-      <button class="btn btn-primary" id="lvl0-btn" onclick="loadLVL(0)">Load Sandbox</button>
-      <button class="btn btn-primary" id="lvl1-btn" onclick="loadLVL(1)">Load Level 1</button>
-      <button class="btn btn-primary" id="lvl2-btn" onclick="loadLVL(2)">Load Level 2</button>
-      <button class="btn btn-primary" id="lvl3-btn" onclick="loadLVL(3)">Load Level 3</button>
-      <h1 id="code-errors"></h1>
+            <!-- BTNS -->
+            <div class="row h-25">
+              <!-- BTN GROUP -->
+              <div class="row h-50 mx-auto">
+                <div class="col-12 text-center my-auto">
+                  <div class="btn-group shadow">
+                    <button class="btn btn-dark game-btn btn-txt-shadow" onclick="loadLVL(0)">Sandbox</button>
+                    <button class="btn btn-success game-btn btn-txt-shadow" onclick="loadLVL(1)">Level 1</button>
+                    <button class="btn btn-warning game-btn text-white btn-txt-shadow" onclick="loadLVL(2)">Level 2</button>
+                    <button class="btn btn-danger game-btn btn-txt-shadow" onclick="loadLVL(3)">Level 3</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row h-50 mx-auto">
+                <div class="col-6">
+                  <button class="w-100 btn btn-primary game-btn shadow btn-txt-shadow" onclick="executeCode()">Run Code</button>
+                </div>
+  
+                <div class="col-6">
+                  <button class="w-100 btn btn-secondary game-btn shadow btn-txt-shadow" onclick="reset()">Reset</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- SKETCH -->
+          <div class="col-lg-6 col-md-12" id="sketch-container"></div>
+        </div>
       </div>
     </section>
 

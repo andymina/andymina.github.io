@@ -34,12 +34,7 @@ class Game {
 
   // true for disabled, false for enabled
   disableButtons(state) {
-    $("#run-btn").prop("disabled", state);
-    $("#reset-btn").prop("disabled", state);
-    $("#lvl0-btn").prop("disabled", state);
-    $("#lvl1-btn").prop("disabled", state);
-    $("#lvl2-btn").prop("disabled", state);
-    $("#lvl3-btn").prop("disabled", state);
+    $(".game-btn").prop("disabled", state);
   }
 
   processCmd(char) {
@@ -86,7 +81,7 @@ class Game {
   }
 
   drawGrid() {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 1; i < 5; i++) {
       line(120 * i, 0, 120 * i, this.canvas.height);
       line(0, 120 * i, this.canvas.width, 120 * i);
     }
