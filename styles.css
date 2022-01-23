@@ -62,6 +62,7 @@
 
 #cursor {
   border-right: .05em solid;
+  border-color: red;
   animation: caret 1s steps(1) infinite;
 }
 
@@ -89,17 +90,17 @@
   transition: all 0.3s ease-in-out;
   box-shadow: 2px 2px 10px black;
 }
+
+#join-us-border-bottom {
+  fill: #212529;
+}
+
+#join-us-border-top {
+  fill: #212529;
+}
 /* #endregion */
 
 /* #region CODING CHALLENGE */
-#coding-game {
-  height: 600px;
-}
-
-#sketch-container {
-  height: 600px;
-}
-
 .CodeMirror {
   height: 600px;
 }
