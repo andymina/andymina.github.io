@@ -211,19 +211,44 @@
     </section>
 
     <!-- CODING PRACTICE-->
-    <section id="coding" class="container-fluid bg-light">
+    <section id="coding" class="container-fluid bg-light py-2">
       <div class="container">
         <!-- SIZE HACK -->
         <div class="row">
           <div id="size-hack" class="col-lg-6 col-md-6"></div>
         </div>
 
+        <!-- TITLE -->
+        <div class="row">
+          <div class="col-12 my-2">
+            <h1 class="display-4 ft-nasa text-center my-0 text-shadow">We need your help!</h1>
+            <hr class="w-25 mx-auto pb-1 my-2 hr-dark text-shadow"/>
+          </div>
+        </div>
+
         <!-- MEDIUM GAME CONTAINER -->
         <div class="d-lg-none">
-          <!-- SKETCH -->
+          <div class="d-none d-md-block d-lg-none col-12">
+            <p class="lead fs-5 text-wrap">
+              Our Explore NASA astronaut needs to reach the alien to learn more about life on Mars,
+              but they can't do it without you! Use the following JavaScript functions and the code editor below
+              to help them get to the alien.
+            </p>
+          </div>
+          
+          <!-- SKETCH AND JS FUNCS -->
           <div class="row">
-            <div class="d-none d-md-block d-lg-none col-md-6">Explainer</div>
-            <div class="col-sm-12 col-md-6">
+            <!-- JS FUNCS -->
+            <div class="col-sm-12 col-md-6 my-sm-2 my-2 my-md-auto my-lg-auto">              
+              <ul class="list-group">
+                <li class="list-group-item"><code>moveUp()</code><br/> move the astronaut 1 box up</li>
+                <li class="list-group-item"><code>moveDown()</code><br/> move the astronaut 1 box down</li>
+                <li class="list-group-item"><code>moveLeft()</code><br/> move the astronaut 1 box left</li>
+                <li class="list-group-item"><code>moveRight()</code><br/> move the astronaut 1 box right</li>
+              </ul>
+            </div>
+            <!-- SKETCH -->
+            <div class="col-sm-12 col-md-6 d-flex align-items-center">
               <div id="md-sketch-container"></div>
             </div>            
           </div>
@@ -331,6 +356,29 @@
               </div>
             </div>
           </div>
+
+          <div class="row my-2">
+            <!-- EXPLAINER -->
+            <div class="col-lg-6 my-auto">
+              <p class="lead fs-3 text-wrap">
+                Our Explore NASA astronaut needs to reach the alien to learn more about life on Mars,
+                but they can't do it without you! Use the following JavaScript functions and the code editor below
+                to help them get to the alien.
+              </p>
+            </div>
+
+            <!-- JS FUNCS -->
+            <div class="col-lg-6 my-lg-auto">              
+              <ul class="list-group">
+                <li class="list-group-item"><code>moveUp()</code>: move the astronaut 1 box up</li>
+                <li class="list-group-item"><code>moveDown()</code>: move the astronaut 1 box down</li>
+                <li class="list-group-item"><code>moveLeft()</code>: move the astronaut 1 box left</li>
+                <li class="list-group-item"><code>moveRight()</code>: move the astronaut 1 box right</li>
+              </ul>
+            </div>
+          </div>
+
+
 
           <!-- SKETCH AND CODE -->
           <div class="row">
