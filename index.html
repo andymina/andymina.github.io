@@ -187,51 +187,69 @@
 
     <!-- CODING PRACTICE-->
     <section id="coding" class="container-fluid bg-light">
-      <div class="container d-none d-lg-block">
-        <!-- SKETCH AND CODE -->
+      <div class="container">
+        <!-- SIZE HACK -->
         <div class="row">
-          <div class="col-lg-6 col-md-12">
-            <!-- CODE -->
-            <div class="row h-75 mx-auto mw-100">
-              <textarea id="code-editor"></textarea>
-            </div>
+          <div id="size-hack" class="col-lg-6 col-md-12"></div>
+        </div>
 
-            <!-- BTNS -->
-            <div class="row h-25">
-              <!-- BTN GROUP -->
-              <div class="row h-50 mx-auto">
-                <div class="col-12 text-center my-auto">
-                  <div class="btn-group shadow">
-                    <button class="btn btn-dark game-btn btn-txt-shadow" onclick="loadLVL(0)">Sandbox</button>
-                    <button class="btn btn-success game-btn btn-txt-shadow" onclick="loadLVL(1)">Level 1</button>
-                    <button class="btn btn-warning game-btn text-white btn-txt-shadow" onclick="loadLVL(2)">Level 2</button>
-                    <button class="btn btn-danger game-btn btn-txt-shadow" onclick="loadLVL(3)">Level 3</button>
+        <!-- MEDIUM AND SMALLER GAME CONTAINER -->
+        <div class="d-none d-md-block d-lg-none">
+          <!-- SKETCH AND CODE -->
+          <div class="row">
+            <div class="col-12" id="md-sketch-container"></div>
+          </div>
+        </div>
+
+        <!-- LARGE GAME CONTAINER -->
+        <div class="d-none d-lg-block">
+          <!-- SKETCH AND CODE -->
+          <div class="row">
+            <div class="col-lg-6 col-md-12">
+              <!-- CODE -->
+              <div class="row h-80 mx-auto mw-100">
+                <textarea id="code-editor"></textarea>
+              </div>
+
+              <!-- BTNS -->
+              <div class="row h-20">
+                <!-- BTN GROUP -->
+                <div class="row h-50 mx-auto">
+                  <div class="col-12 text-center my-auto">
+                    <div class="btn-group shadow">
+                      <button class="btn btn-dark game-btn btn-txt-shadow" onclick="loadLVL(0)">Sandbox</button>
+                      <button class="btn btn-success game-btn btn-txt-shadow" onclick="loadLVL(1)">Level 1</button>
+                      <button class="btn btn-warning game-btn text-white btn-txt-shadow" onclick="loadLVL(2)">Level 2</button>
+                      <button class="btn btn-danger game-btn btn-txt-shadow" onclick="loadLVL(3)">Level 3</button>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="row h-50 mx-auto">
-                <div class="col-6">
-                  <button class="w-100 btn btn-primary game-btn shadow btn-txt-shadow" onclick="executeCode()">Run Code</button>
+                <div class="row h-50 mx-auto">
+                  <div class="col-6 mb-auto">
+                    <button class="w-100 btn btn-primary game-btn shadow btn-txt-shadow" onclick="executeCode()">Run Code</button>
+                  </div>
+    
+                  <div class="col-6 mb-auto">
+                    <button class="w-100 btn btn-secondary game-btn shadow btn-txt-shadow" onclick="reset()">Reset</button>
+                  </div>
                 </div>
-  
-                <div class="col-6">
-                  <button class="w-100 btn btn-secondary game-btn shadow btn-txt-shadow" onclick="reset()">Reset</button>
-                </div>
-              </div>
 
+              </div>
+            </div>
+
+            <!-- SKETCH -->
+            <div class="col-lg-6 col-md-12">
+              <div id="sketch-container"></div>
             </div>
           </div>
-
-          <!-- SKETCH -->
-          <div class="col-lg-6 col-md-12" id="sketch-container"></div>
         </div>
       </div>
     </section>
 
     <!-- GALLERY -->
     <section id="gallery" class="container-fluid">
-
+      <h1>hello world</h1>
     </section>
 
     <!-- LOAD SCRIPTS -->

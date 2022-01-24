@@ -1,8 +1,8 @@
 class Sprite {
-  constructor(img, x = 0, y = 0) {
+  constructor(img, boxWidth, x = 0, y = 0) {
     this.x = this.startX = x;
     this.y = this.startY = y;
-    this.step = 120;
+    this.boxWidth = boxWidth;
     this.sprite = img;
   }
 
@@ -11,13 +11,17 @@ class Sprite {
     this.y = this.startY;
   }
 
-  draw() {
+  draw(boxWidth, scaleFactor) {
     imageMode(CENTER);
+    
+    // add offset since images drawn from center
+    let offset = boxWidth / 2;
     image(
       this.sprite,
-      60 + this.step * this.x, // x coord
-      60 + this.step * this.y, // y coord
-      this.sprite.width, this.sprite.height
+      offset + boxWidth * this.x, // x coord
+      offset + boxWidth * this.y, // y coord
+      this.sprite.width * scaleFactor, // scale sprite to match new width
+      this.sprite.height * scaleFactor
     );
     imageMode(CORNER);
   }

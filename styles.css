@@ -29,6 +29,14 @@
   opacity: 1;
   box-shadow: 2px 2px 2px black;
 }
+
+.h-80 {
+  height: 80% !important;
+}
+
+.h-20 {
+  height: 20% !important;
+}
 /* #endregion */
 
 /* #region HOME */
@@ -94,6 +102,7 @@
 svg {
   filter: drop-shadow(2px 2px 1px rgb(0 0 0 / 0.4));
   fill: #212529;
+  width: 101vw;
 }
 /* #endregion */
 

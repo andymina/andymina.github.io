@@ -10,15 +10,22 @@ function preload() {
   rockImg = loadImage(`${baseURL}/assets/game/rock.png`);
 };
 
+function windowResized() {
+  game.updateCanvas();
+  window.game = game;
+}
+
 // p5js setup
 function setup() {
   game = new Game(bgImg, astroImg, alienImg, rockImg, 60);
+  $(".p5Canvas").addClass("rounded-3 shadow");
   rectMode(CENTER);
   strokeWeight(2);
   frameRate(game.fps);
   noLoop(); // draw once and stop
 };
 
+// p5 draw
 function draw() {
   game.draw();
 }

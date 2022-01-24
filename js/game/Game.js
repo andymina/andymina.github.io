@@ -3,8 +3,20 @@ class Game {
     // p5 stuff
     this.frame = 0;
     this.fps = fps;
-    this.canvas = createCanvas(600, 600).parent("sketch-container");
     this.bgImg = bgImg;
+
+    // canvas stuff
+    /**
+     * canvas needs to be a square. get the size of
+     * col-6 and set it equal to that
+     */
+    this.parent = `${window.innerWidth < 992 ? "md-" : ""}sketch-container`;
+    this.canvas = createCanvas(
+      $("#size-hack").width(),
+      $("#size-hack").width()
+    ).parent(this.parent);
+    this.boxWidth = this.canvas.width / 5 // game has 5 boxes
+    this.scaleFactor = this.boxWidth / 120 // game was originally made for 120px boxes    
 
     // game setup 
     this.astroImg = astroImg;
@@ -30,6 +42,24 @@ class Game {
       ["14", "34"],
     ]
     this.loadLVL(0); // load sandbox
+  }
+
+  updateCanvas() {
+    resizeCanvas(
+      $("#size-hack").width(),
+      $("#size-hack").width()
+    );
+
+    // reparent if the window hit a breakpoint
+    let parent = `${window.innerWidth < 992 ? "md-" : ""}sketch-container`;
+    if (parent !== this.parent) {
+      this.parent = parent;
+      this.canvas.parent(this.parent);
+    }
+    
+    // calc the new scale factor and update box width
+    this.scaleFactor = (this.boxWidth = (this.canvas.width / 5)) / 120;
+    redraw();
   }
 
   // true for disabled, false for enabled
@@ -71,19 +101,19 @@ class Game {
     for (let row = 0; row < this.currentLVL.length; row++) {
       for (let col = 0; col < this.currentLVL[row].length; col++) {
         if (this.currentLVL[row][col] === "A")
-          this.player = new Sprite(this.astroImg, col, row);
+          this.player = new Sprite(this.astroImg, this.boxWidth, col, row);
         else if (this.currentLVL[row][col] === "R")
-          this.drawables.push(new Sprite(this.rockImg, col, row));
+          this.drawables.push(new Sprite(this.rockImg, this.boxWidth, col, row));
         else if (this.currentLVL[row][col] === "E")
-          this.drawables.push(new Sprite(this.alienImg, col, row));
+          this.drawables.push(new Sprite(this.alienImg, this.boxWidth, col, row));
       }
     }
   }
 
   drawGrid() {
     for (let i = 1; i < 5; i++) {
-      line(120 * i, 0, 120 * i, this.canvas.height);
-      line(0, 120 * i, this.canvas.width, 120 * i);
+      line(this.boxWidth * i, 0, this.boxWidth * i, this.canvas.height);
+      line(0, this.boxWidth * i, this.canvas.width, this.boxWidth * i);
     }
   }
 
@@ -92,9 +122,9 @@ class Game {
 
     // draw phase
     this.drawGrid();
-    this.player.draw();
+    this.player.draw(this.boxWidth, this.scaleFactor);
     for (let item of this.drawables)
-      item.draw();
+      item.draw(this.boxWidth, this.scaleFactor);
 
     // check for win
     for (let i = 0; i < this.currentGoals.length; i++) {
