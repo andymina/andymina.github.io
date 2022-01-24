@@ -1,0 +1,44 @@
+        <div class="d-lg-none">
+          <!-- SKETCH AND CODE -->
+          <div class="row">
+            <div class="col-6">
+              <div id="md-sketch-container"></div>
+            </div>
+            <div class="col-6"></div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <!-- CODE -->
+              <div class="row h-80 mx-auto mw-100">
+                <textarea id="md-code-editor"></textarea>
+              </div>
+
+              <!-- BTNS -->
+              <div class="row h-20">
+                <!-- BTN GROUP -->
+                <div class="row h-50 mx-auto">
+                  <div class="col-12 text-center my-auto">
+                    <div class="btn-group shadow">
+                      <button class="btn btn-dark game-btn btn-txt-shadow" onclick="loadLVL(0)">Sandbox</button>
+                      <button class="btn btn-success game-btn btn-txt-shadow" onclick="loadLVL(1)">Level 1</button>
+                      <button class="btn btn-warning game-btn text-white btn-txt-shadow" onclick="loadLVL(2)">Level 2</button>
+                      <button class="btn btn-danger game-btn btn-txt-shadow" onclick="loadLVL(3)">Level 3</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row h-50 mx-auto">
+                  <div class="col-6 mb-auto">
+                    <button class="w-100 btn btn-primary game-btn shadow btn-txt-shadow" onclick="executeCode()">Run Code</button>
+                  </div>
+
+                  <div class="col-6 mb-auto">
+                    <button class="w-100 btn btn-secondary game-btn shadow btn-txt-shadow" onclick="reset()">Reset</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>

@@ -96,10 +96,11 @@
         </div>
 
         <div class="row py-2 h-100">
-          <div class="col-lg-4 col-md-12">
+          <div class="col-lg-4 col-md-6 my-auto">
             <img id="me" class="d-block w-75 rounded shadow mx-auto" src="assets/imgs/me.jpg"/>
           </div>
-          <div class="col-lg-8 col-mg-12 py-2 my-auto">
+          <!-- HIDE ONLY ON MD -->
+          <div class="d-md-none d-lg-block col-lg-8 col-md-6 py-2 my-auto">
             <p class="fs-3 lead text-wrap">
               Founded by Andy Mina, avid NASA enthusiast, in 2014, Explore NASA aims
               to have every child across the country interested in space exploration help push
@@ -112,6 +113,30 @@
               to investigate."
             </em>
             <p class="lead fs-5 text-end">- Seneca the Younger, Natural Questions</p>
+          </div>
+
+          <!-- DISPLAY ONLY ON MD -->
+          <div class="col-md-6 d-none d-md-block d-lg-none">
+            <div class="py-2 my-auto">
+              <p class="fs-3 lead text-wrap">
+                Founded by Andy Mina, avid NASA enthusiast, in 2014, Explore NASA aims
+                to have every child across the country interested in space exploration help push
+                the final frontier. Want to know more about Andy? Check out his website
+                <a href="https://andymina.com">here</a>.
+              </p>
+            </div>
+          </div>
+
+          <div class="d-none d-md-block d-lg-none">
+            <div class="row">
+              <div class="col-12">
+                <em class="lead fs-3 text-wrap text-center">
+                  "Our universe is a sorry little affair unless it has in it something for every age
+                  to investigate."
+                </em>
+                <p class="lead fs-5 text-end">- Seneca the Younger, Natural Questions</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -190,14 +215,66 @@
       <div class="container">
         <!-- SIZE HACK -->
         <div class="row">
-          <div id="size-hack" class="col-lg-6 col-md-12"></div>
+          <div id="size-hack" class="col-lg-6 col-md-6"></div>
         </div>
 
-        <!-- MEDIUM AND SMALLER GAME CONTAINER -->
-        <div class="d-none d-md-block d-lg-none">
-          <!-- SKETCH AND CODE -->
+        <!-- MEDIUM GAME CONTAINER -->
+        <div class="d-lg-none">
+          <!-- SKETCH -->
           <div class="row">
-            <div class="col-12" id="md-sketch-container"></div>
+            <div class="d-none d-md-block d-lg-none col-md-6">Explainer</div>
+            <div class="col-sm-12 col-md-6">
+              <div id="md-sketch-container"></div>
+            </div>            
+          </div>
+
+          <!-- CODE -->
+          <div class="row">
+            <div class="col-md-12">              
+              <div class="row mx-auto mw-100" style="height: 40vh;">
+                <textarea id="md-code-editor"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- BTN GROUP -->
+          <!-- <div class="row">
+            <div class="col-12 text-center">
+              <div >
+                <div class="btn-group shadow">
+                  <button class="btn btn-dark game-btn btn-txt-shadow" onclick="loadLVL(0)">Sandbox</button>
+                  <button class="btn btn-success game-btn btn-txt-shadow" onclick="loadLVL(1)">Level 1</button>
+                  <button class="btn btn-warning game-btn text-white btn-txt-shadow" onclick="loadLVL(2)">Level 2</button>
+                  <button class="btn btn-danger game-btn btn-txt-shadow" onclick="loadLVL(3)">Level 3</button>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          
+          <div class="row">
+            <div class="col-12">
+              <div class="text-center my-2">
+                <button class="game-btn btn-text-shadow btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select a level!</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" onclick="loadLVL(0)">Sandbox</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" onclick="loadLVL(1)">Level 1</a></li>
+                  <li><a class="dropdown-item" onclick="loadLVL(2)">Leve 2</a></li>
+                  <li><a class="dropdown-item" onclick="loadLVL(3)">Level 3</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- BTNS -->
+          <div class="row">
+            <div class="col-6">
+              <button class="w-100 btn btn-primary game-btn shadow btn-txt-shadow" onclick="executeCode()">Run Code</button>
+            </div>
+
+            <div class="col-6">
+              <button class="w-100 btn btn-secondary game-btn shadow btn-txt-shadow" onclick="reset()">Reset</button>
+            </div>
           </div>
         </div>
 
@@ -205,7 +282,7 @@
         <div class="d-none d-lg-block">
           <!-- SKETCH AND CODE -->
           <div class="row">
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-6">
               <!-- CODE -->
               <div class="row h-80 mx-auto mw-100">
                 <textarea id="code-editor"></textarea>
@@ -239,7 +316,7 @@
             </div>
 
             <!-- SKETCH -->
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-6">
               <div id="sketch-container"></div>
             </div>
           </div>
@@ -332,6 +409,8 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
       ></script>
+      <!-- CONFETTI -->
+      <script src="js/confetti.js"></script>
       <!-- TEXT ANI -->
       <script src="js/text-ani.js"></script>
       <!-- GAME LOGIC -->

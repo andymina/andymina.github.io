@@ -69,19 +69,19 @@ class Game {
 
   processCmd(char) {
     let space = "";
-    if (char === "u") {
+    if (char === "u" && this.player.y - 1 >= 0) {
       space = this.currentLVL[this.player.y - 1][this.player.x]
       if (space === "A" || space === "X")
         this.player.y -= 1;
-    } else if (char === "d") {
+    } else if (char === "d" && this.player.y + 1 < this.currentLVL.length) {
       space = this.currentLVL[this.player.y + 1][this.player.x]
       if (space === "A" || space === "X")
         this.player.y += 1;
-    } else if (char === "l") {
+    } else if (char === "l" && this.player.x - 1 >= 0) {
       space = this.currentLVL[this.player.y][this.player.x - 1]
       if (space === "A" || space === "X")
         this.player.x -= 1;
-    } else if (char === "r") {
+    } else if (char === "r" && this.player.x + 1 < this.currentLVL.length) {
       space = this.currentLVL[this.player.y][this.player.x + 1]
       if (space === "A" || space === "X")
         this.player.x += 1;
@@ -89,7 +89,25 @@ class Game {
   }
 
   resetPlayer() {
-    this.player.reset()
+    this.player.reset();
+    this.win = false;
+  }
+
+  checkWin() {
+    // check for win
+    for (let i = 0; i < this.currentGoals.length; i++) {
+      if (
+        this.player.x === parseInt(this.currentGoals[i][0]) &&
+        this.player.y === parseInt(this.currentGoals[i][1])
+      ) {
+        let audio = new Audio("assets/fanfare.mp3");
+        audio.volume = 0.20;
+        audio.play();
+        showConfetti(5000);
+        this.win = true;
+        break;
+      }
+    }
   }
 
   loadLVL(num) {
@@ -126,18 +144,8 @@ class Game {
     for (let item of this.drawables)
       item.draw(this.boxWidth, this.scaleFactor);
 
-    // check for win
-    for (let i = 0; i < this.currentGoals.length; i++) {
-      if (
-        this.player.x === parseInt(this.currentGoals[i][0]) &&
-        this.player.y === parseInt(this.currentGoals[i][1])
-      ) {
-        console.log("You win!");
-        break;
-      }
-    }
-
     if (this.cmdQueue.length === 0) {
+      if (!this.win) this.checkWin();
       this.disableButtons(false); // enable btns if no cmds
       noLoop();                   // stop drawing      
     }      

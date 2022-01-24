@@ -11,8 +11,8 @@ function preload() {
 };
 
 function windowResized() {
+  // update game
   game.updateCanvas();
-  window.game = game;
 }
 
 // p5js setup
