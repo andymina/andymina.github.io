@@ -228,6 +228,38 @@
             </div>            
           </div>
 
+          <!-- ERRORS BUTTON -->
+          <div class="row d-none errors-button">
+            <div class="col-lg-12">
+              <div class="rounded-3 text-center my-2">
+                <button
+                  class="btn btn-danger btn-text-shadow"
+                  data-bs-toggle="modal" data-bs-target="#exampleModalMd"
+                >
+                  Uh oh! Looks like there are some errors. Click here.
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ERROR MODAL -->
+          <div class="modal fade" id="exampleModalMd" tabindex="-1" aria-labelledby="exampleModalMdLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title ft-nasa" id="exampleModalMdLabel">Errors!</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-danger text-white lead fs-5">
+                  <p id="code-errors"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- CODE -->
           <div class="row">
             <div class="col-md-12">              
@@ -269,7 +301,7 @@
         <div class="d-none d-lg-block">
 
           <!-- ERRORS BUTTON -->
-          <div class="row d-none" id="errors-button">
+          <div class="row d-none errors-button">
             <div class="col-lg-12">
               <div class="rounded-3 text-center my-2">
                 <button

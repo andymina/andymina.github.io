@@ -83,10 +83,10 @@ const executeCode = () => {
 
 const showErrors = (state) => {
   if (state) {
-    $("#errors-button").removeClass("d-none");
-    $("#errors-button").addClass("d-block");
+    $(".errors-button").removeClass("d-none");
+    $(".errors-button").addClass("d-block");
   } else {
-    $("#errors-button").removeClass("d-block");
-    $("#errors-button").addClass("d-none");
+    $(".errors-button").removeClass("d-block");
+    $(".errors-button").addClass("d-none");
   }
 }
