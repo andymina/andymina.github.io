@@ -47,7 +47,6 @@
 /* NAVBAR */
 .nav-link {
   font-family: NASA;
-  color: black !important;
   margin: 0 5px;
 }
 
@@ -102,7 +101,7 @@
 svg {
   filter: drop-shadow(2px 2px 1px rgb(0 0 0 / 0.4));
   fill: #212529;
-  width: 101vw;
+  margin-left: -10px;
 }
 /* #endregion */
 
