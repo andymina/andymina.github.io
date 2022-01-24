@@ -103,7 +103,7 @@ class Game {
         let audio = new Audio("assets/fanfare.mp3");
         audio.volume = 0.20;
         audio.play();
-        showConfetti(5000);
+        showConfetti(3000);
         this.win = true;
         break;
       }

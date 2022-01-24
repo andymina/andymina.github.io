@@ -237,20 +237,7 @@
             </div>
           </div>
 
-          <!-- BTN GROUP -->
-          <!-- <div class="row">
-            <div class="col-12 text-center">
-              <div >
-                <div class="btn-group shadow">
-                  <button class="btn btn-dark game-btn btn-txt-shadow" onclick="loadLVL(0)">Sandbox</button>
-                  <button class="btn btn-success game-btn btn-txt-shadow" onclick="loadLVL(1)">Level 1</button>
-                  <button class="btn btn-warning game-btn text-white btn-txt-shadow" onclick="loadLVL(2)">Level 2</button>
-                  <button class="btn btn-danger game-btn btn-txt-shadow" onclick="loadLVL(3)">Level 3</button>
-                </div>
-              </div>
-            </div>
-          </div> -->
-          
+          <!-- BTN GROUP -->          
           <div class="row">
             <div class="col-12">
               <div class="text-center my-2">
@@ -280,6 +267,39 @@
 
         <!-- LARGE GAME CONTAINER -->
         <div class="d-none d-lg-block">
+
+          <!-- ERRORS BUTTON -->
+          <div class="row d-none" id="errors-button">
+            <div class="col-lg-12">
+              <div class="rounded-3 text-center my-2">
+                <button
+                  class="btn btn-danger btn-text-shadow"
+                  data-bs-toggle="modal" data-bs-target="#exampleModal"
+                >
+                  Uh oh! Looks like there are some errors. Click here.
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ERROR MODAL -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title ft-nasa" id="exampleModalLabel">Errors!</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-danger text-white lead fs-5">
+                  <p id="code-errors"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- SKETCH AND CODE -->
           <div class="row">
             <div class="col-lg-6">

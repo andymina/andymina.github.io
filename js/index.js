@@ -72,9 +72,21 @@ window.onresize = () => {
 }
 
 const executeCode = () => {
+  showErrors(false);
   try {
     window.Function(`"use strict";${editor.getValue()};game.resetPlayer();game.disableButtons(true);loop();`)();
   } catch (err) {
+    showErrors(true);
     $("#code-errors").text(err);
+  }
+}
+
+const showErrors = (state) => {
+  if (state) {
+    $("#errors-button").removeClass("d-none");
+    $("#errors-button").addClass("d-block");
+  } else {
+    $("#errors-button").removeClass("d-block");
+    $("#errors-button").addClass("d-none");
   }
 }

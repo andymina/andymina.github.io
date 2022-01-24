@@ -31,8 +31,8 @@ function draw() {
 }
 
 // user facing
-const loadLVL = (lvl) => { game.loadLVL(lvl); redraw(); }
-const reset = () => { game.resetPlayer(); redraw(); };
+const loadLVL = (lvl) => { showErrors(false); game.loadLVL(lvl); redraw(); }
+const reset = () => { showErrors(false); game.resetPlayer(); redraw(); };
 const moveUp = () => game.cmdQueue.push("u");
 const moveDown = () => game.cmdQueue.push("d");
 const moveLeft = () => game.cmdQueue.push("l");
