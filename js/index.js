@@ -28,6 +28,8 @@ $(document).ready(() => {
   
   // show content
   $("#content").removeClass("d-none");
+
+  setTimeout(() => $("#parallax-vid").css("opacity", 1), 500);
 });
 
 // special syntax highlighting for keywords
