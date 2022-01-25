@@ -1,8 +1,20 @@
 let editor;
 
 $("document").ready(() => {
+  // init editor
   let selector = window.innerWidth < 992 ? "#md-code-editor" : "#code-editor";
   editor = createCodeMirror(selector);
+
+  // init datepicker
+  $("#date-picker").datepicker({
+    todayHighlight: true,
+    format: 'mm/dd/yyyy',
+    container: "date-picker-container"
+  });
+  // select today
+  $("#date-picker").datepicker("setDate", new Date());
+  // get NASA APOD
+  getAPOD();
 });
 
 // special syntax highlighting for keywords

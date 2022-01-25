@@ -26,6 +26,8 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
       />
+      <!-- DATE PICKER -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.standalone.min.css" integrity="sha512-p4vIrJ1mDmOVghNMM4YsWxm0ELMJ/T0IkdEvrkNHIcgFsSzDi/fV7YxzTzb3mnMvFPawuIyIrHcpxClauEfpQg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <!-- STYLES -->
       <link rel="stylesheet" href="styles.css">
     </div>
@@ -426,11 +428,32 @@
       </div>
     </section>
 
-    <!-- GALLERY -->
-    <section id="gallery" class="container-fluid">
-      <h1>this is the gallery</h1>
+    <!-- VIDEO PARALLAX -->
+    <section id="gallery" class="vp-container">
+      <video autoplay muted loop>
+        <source src="assets/bg.mp4" type="video/mp4"/>
+      </video>
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-12 my-auto">
+            <h1 class="display-1 ft-nasa text-center my-0 text-shadow text-white">Gallery</h1>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- GALLERY -->
+    <section id="gallery-content" class="container-fluid bg-light py-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-6" id="date-picker-container">
+            <div id="date-picker"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
     <section id="footer" class="container-fluid bg-dark py-2">
       <div class="container">
         <footer class="col-12 d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
@@ -527,6 +550,10 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
       ></script>
+      <!-- DATE PICKER -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <!-- NASA API -->
+      <script src="js/nasa.js"></script>
       <!-- CONFETTI -->
       <script src="js/confetti.js"></script>
       <!-- TEXT ANI -->
