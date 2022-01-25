@@ -1,20 +1,33 @@
 let editor;
 
-$("document").ready(() => {
+$(document).ready(() => {
   // init editor
   let selector = window.innerWidth < 992 ? "#md-code-editor" : "#code-editor";
   editor = createCodeMirror(selector);
+
+  let today = new Date();
+  let tmrw = new Date();
+  tmrw.setDate(today.getDate() + 1);
 
   // init datepicker
   $("#date-picker").datepicker({
     todayHighlight: true,
     format: 'mm/dd/yyyy',
-    container: "date-picker-container"
-  });
+    container: "date-picker-container",
+    endDate: tmrw
+  }).on("changeDate", (e) => getAPOD(e.date));
   // select today
-  $("#date-picker").datepicker("setDate", new Date());
+  $("#date-picker").datepicker("setDate", today);
+  // center it
+  $(".datepicker").addClass("mx-auto");
   // get NASA APOD
-  getAPOD();
+  getAPOD(today);
+
+  // disable loader
+  $("#loader-container").addClass("d-none");
+  
+  // show content
+  $("#content").removeClass("d-none");
 });
 
 // special syntax highlighting for keywords
@@ -52,7 +65,6 @@ const createCodeMirror = (selector) => {
 
   // programmatically change font size
   $(".CodeMirror").addClass("fs-5 rounded-3 shadow");
-
   return cm;
 }
 

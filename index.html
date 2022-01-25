@@ -42,433 +42,465 @@
     <link rel="manifest" href="/site.webmanifest">
   </head>
   <body>
-    <!-- HOME -->
-    <section id="home">
-      <!-- NAVBAR -->
-      <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light shadow-lg">
-        <div class="container">
-          <!-- BRAND -->
-          <a class="navbar-brand text-wrap ft-nasa text-danger fs-2" href="#home">EXPLORE NASA INC.</a>
-          <!-- TOGGLER -->
-          <button
-            class="navbar-toggler" type="button"
-            data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- NAVBAR -->
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav me-auto mb-2 mb-lg-0">
-              <a class="nav-link text-black" href="#about-us">About Us</a>
-              <div class="vr"></div>
-              <a class="nav-link text-black" href="#join-us">Join the Mission</a>
-              <div class="vr"></div>
-              <a class="nav-link text-black" href="#coding">Coding Challenge</a>
-              <div class="vr"></div>
-              <a class="nav-link text-black" href="#gallery">Gallery</a>
+    <div id="loader-container" class="container-fluid" style="width: 100vw; height: 100vh;">
+      <div class="row h-100">
+        <div class="col-12 my-auto text-center">
+          <div id="loader" class="mx-auto"></div>
+          <h1 class="display-4 my-2">Loading...</h1>
+        </div>
+      </div>      
+    </div>
+
+    <div id="content" class="d-none">
+      <!-- HOME -->
+      <section id="home">
+        <!-- NAVBAR -->
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light shadow-lg">
+          <div class="container">
+            <!-- BRAND -->
+            <a class="navbar-brand text-wrap ft-nasa text-danger fs-2" href="#home">EXPLORE NASA INC.</a>
+            <!-- TOGGLER -->
+            <button
+              class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- NAVBAR -->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav me-auto mb-2 mb-lg-0">
+                <a class="nav-link text-black" href="#about-us">About Us</a>
+                <div class="vr"></div>
+                <a class="nav-link text-black" href="#join-us">Join the Mission</a>
+                <div class="vr"></div>
+                <a class="nav-link text-black" href="#coding">Coding Challenge</a>
+                <div class="vr"></div>
+                <a class="nav-link text-black" href="#gallery">Gallery</a>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
+        </nav>
 
-      <!-- HOME -->
-      <section id="landing" class="container-fluid">      
+        <!-- HOME -->
+        <section id="landing" class="container-fluid">      
+          <div class="container">
+            <div class="row">
+              <h1 class="typewriter col-12 display-1 text-light text-center mt-5 p-2 ft-nasa text-wrap">
+                The future needs <em style="color: red;">you</em>.
+              </h1>
+            </div>
+            <div class="row">
+              <h1 class="typewriter col-12 display-1 text-light text-center mirror ft-nasa text-wrap">
+                The future needs <em style="color: red;">you</em>.
+              </h1>
+            </div>
+        </div>
+        </section>
+      </section>
+
+      <!-- ABOUT US -->
+      <section id="about-us" class="container-fluid bg-light py-4">
         <div class="container">
           <div class="row">
-            <h1 class="typewriter col-12 display-1 text-light text-center mt-5 p-2 ft-nasa text-wrap">
-              The future needs <em style="color: red;">you</em>.
-            </h1>
-          </div>
-          <div class="row">
-            <h1 class="typewriter col-12 display-1 text-light text-center mirror ft-nasa text-wrap">
-              The future needs <em style="color: red;">you</em>.
-            </h1>
-          </div>
-      </div>
-      </section>
-    </section>
-
-    <!-- ABOUT US -->
-    <section id="about-us" class="container-fluid bg-light py-4">
-      <div class="container">
-        <div class="row">
-          <h1 class="display-4 ft-nasa text-center my-0 text-shadow">Who are we?</h1>
-          <hr class="w-25 mx-auto pb-1 my-2 hr-dark text-shadow"/>
-        </div>
-
-        <div class="row py-2 h-100">
-          <div class="col-lg-4 col-md-6 my-auto">
-            <img id="me" class="d-block w-75 rounded shadow mx-auto" src="assets/imgs/me.jpg"/>
-          </div>
-          <!-- HIDE ONLY ON MD -->
-          <div class="d-md-none d-lg-block col-lg-8 col-md-6 py-2 my-auto">
-            <p class="fs-3 lead text-wrap">
-              Founded by Andy Mina, avid NASA enthusiast, in 2014, Explore NASA aims
-              to have every child across the country interested in space exploration help push
-              the final frontier. Want to know more about Andy? Check out his website
-              <a href="https://andymina.com">here</a>.
-            </p>
-
-            <em class="lead fs-3 text-wrap text-center">
-              "Our universe is a sorry little affair unless it has in it something for every age
-              to investigate."
-            </em>
-            <p class="lead fs-5 text-end">- Seneca the Younger, Natural Questions</p>
+            <h1 class="display-4 ft-nasa text-center my-0 text-shadow">Who are we?</h1>
+            <hr class="w-25 mx-auto pb-1 my-2 hr-dark text-shadow"/>
           </div>
 
-          <!-- DISPLAY ONLY ON MD -->
-          <div class="col-md-6 d-none d-md-block d-lg-none">
-            <div class="py-2 my-auto">
+          <div class="row py-2 h-100">
+            <div class="col-lg-4 col-md-6 my-auto">
+              <img id="me" class="d-block w-75 rounded shadow mx-auto" src="assets/imgs/me.jpg"/>
+            </div>
+            <!-- HIDE ONLY ON MD -->
+            <div class="d-md-none d-lg-block col-lg-8 col-md-6 py-2 my-auto">
               <p class="fs-3 lead text-wrap">
                 Founded by Andy Mina, avid NASA enthusiast, in 2014, Explore NASA aims
                 to have every child across the country interested in space exploration help push
                 the final frontier. Want to know more about Andy? Check out his website
                 <a href="https://andymina.com">here</a>.
               </p>
-            </div>
-          </div>
 
-          <div class="d-none d-md-block d-lg-none">
-            <div class="row">
-              <div class="col-12">
-                <em class="lead fs-3 text-wrap text-center">
-                  "Our universe is a sorry little affair unless it has in it something for every age
-                  to investigate."
-                </em>
-                <p class="lead fs-5 text-end">- Seneca the Younger, Natural Questions</p>
+              <em class="lead fs-3 text-wrap text-center">
+                "Our universe is a sorry little affair unless it has in it something for every age
+                to investigate."
+              </em>
+              <p class="lead fs-5 text-end">- Seneca the Younger, Natural Questions</p>
+            </div>
+
+            <!-- DISPLAY ONLY ON MD -->
+            <div class="col-md-6 d-none d-md-block d-lg-none">
+              <div class="py-2 my-auto">
+                <p class="fs-3 lead text-wrap">
+                  Founded by Andy Mina, avid NASA enthusiast, in 2014, Explore NASA aims
+                  to have every child across the country interested in space exploration help push
+                  the final frontier. Want to know more about Andy? Check out his website
+                  <a href="https://andymina.com">here</a>.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-none d-md-block d-lg-none">
+              <div class="row">
+                <div class="col-12">
+                  <em class="lead fs-3 text-wrap text-center">
+                    "Our universe is a sorry little affair unless it has in it something for every age
+                    to investigate."
+                  </em>
+                  <p class="lead fs-5 text-end">- Seneca the Younger, Natural Questions</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- JOIN US -->
-    <section class="bg-light">
+      <!-- JOIN US -->
+      <section class="bg-light">
+        <svg
+          class="w-full fill-current transform -translate-y-1 scale-105"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1600 162"
+          style="transform: rotate(180deg); margin-bottom: -1%;"
+        >
+          <path
+            id="join-us-border-top"
+            d="M1600 0v113.868c-91.328-1.407-173.577 60.877-297.907 45.57-124.33-15.308-103.654-33.11-207.373-63.606-69.147-20.33-143.387-20.33-222.72 0-56.554 17.89-114.692 23.901-174.415 18.036-89.585-8.798-84.69-15.89-199.92-48.532-89.414-25.328-211.396-25.328-247.427-27.283-68.21-3.7-151.622 9.683-250.238 40.15V0h1600z">
+          </path>
+        </svg>
+      </section>
+
+      <section id="join-us" class="container-fluid bg-dark py-2">
+        <div class="container">
+          <div class="row">
+            <h1 class="display-4 ft-nasa text-center my-0 text-shadow-light text-light">Join the Mission</h1>
+            <hr class="w-25 mx-auto pb-1 my-2 hr-light text-shadow" />
+          </div>
+
+          <div class="row py-2">
+            <p class="col-12 fs-3 lead text-wrap text-light">
+              We believe that NASA has something for all students and we're here to help you find
+              it. As a partner program with NASA, our goal is to help students discover space in
+              the ways that interest them. Whether you like robotics, medicine, or graphic
+              design, there's a community here for you. Interested in programming at NASA?
+              Take our <a href="#coding">coding challenge</a> below.
+            </p>
+          </div>
+
+          <div class="row py-2 h-100">
+            <div class="my-auto col-lg-6 col-md-12">
+              <p class="fs-3 lead text-wrap text-light">
+                College students of all majors are welcome to join Explore NASA's summer
+                internship program: Space Rangers. High school students are encouraged to our
+                introductory summer internship: Space Cadets. Check out testimonials from interns
+                placed through Explore NASA in this video.
+              </p>
+            </div>
+            <div class="my-auto col-lg-6 col-md-12">
+              <div class="ratio ratio-16x9">
+                <iframe
+                  src="https://www.youtube.com/embed/63AK3H7BK6g"
+                  class="iframe-shadow"
+                  title="YouTube video player"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="bg-light">
       <svg
         class="w-full fill-current transform -translate-y-1 scale-105"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1600 162"
-        style="transform: rotate(180deg); margin-bottom: -1%;"
+        style="margin-top: -1%;"
       >
         <path
-          id="join-us-border-top"
+          id="join-us-border-bottom"
           d="M1600 0v113.868c-91.328-1.407-173.577 60.877-297.907 45.57-124.33-15.308-103.654-33.11-207.373-63.606-69.147-20.33-143.387-20.33-222.72 0-56.554 17.89-114.692 23.901-174.415 18.036-89.585-8.798-84.69-15.89-199.92-48.532-89.414-25.328-211.396-25.328-247.427-27.283-68.21-3.7-151.622 9.683-250.238 40.15V0h1600z">
         </path>
       </svg>
-    </section>
+      </section>
 
-    <section id="join-us" class="container-fluid bg-dark py-2">
-      <div class="container">
-        <div class="row">
-          <h1 class="display-4 ft-nasa text-center my-0 text-shadow-light text-light">Join the Mission</h1>
-          <hr class="w-25 mx-auto pb-1 my-2 hr-light text-shadow" />
-        </div>
-
-        <div class="row py-2">
-          <p class="col-12 fs-3 lead text-wrap text-light">
-            We believe that NASA has something for all students and we're here to help you find
-            it. As a partner program with NASA, our goal is to help students discover space in
-            the ways that interest them. Whether you like robotics, medicine, or graphic
-            design, there's a community here for you. Interested in programming at NASA?
-            Take our <a href="#coding">coding challenge</a> below.
-          </p>
-        </div>
-
-        <div class="row py-2 h-100">
-          <div class="my-auto col-lg-6 col-md-12">
-            <p class="fs-3 lead text-wrap text-light">
-              College students of all majors are welcome to join Explore NASA's summer
-              internship program: Space Rangers. High school students are encouraged to our
-              introductory summer internship: Space Cadets. Check out testimonials from interns
-              placed through Explore NASA in this video.
-            </p>
-          </div>
-          <div class="my-auto col-lg-6 col-md-12">
-            <div class="ratio ratio-16x9">
-              <iframe
-                src="https://www.youtube.com/embed/63AK3H7BK6g"
-                class="iframe-shadow"
-                title="YouTube video player"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-      </div>
-    </section>
-
-    <section class="bg-light">
-    <svg
-      class="w-full fill-current transform -translate-y-1 scale-105"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1600 162"
-      style="margin-top: -1%;"
-    >
-      <path
-        id="join-us-border-bottom"
-        d="M1600 0v113.868c-91.328-1.407-173.577 60.877-297.907 45.57-124.33-15.308-103.654-33.11-207.373-63.606-69.147-20.33-143.387-20.33-222.72 0-56.554 17.89-114.692 23.901-174.415 18.036-89.585-8.798-84.69-15.89-199.92-48.532-89.414-25.328-211.396-25.328-247.427-27.283-68.21-3.7-151.622 9.683-250.238 40.15V0h1600z">
-      </path>
-    </svg>
-    </section>
-
-    <!-- CODING PRACTICE-->
-    <section id="coding" class="container-fluid bg-light py-2">
-      <div class="container">
-        <!-- SIZE HACK -->
-        <div class="row">
-          <div id="size-hack" class="col-lg-6 col-md-6"></div>
-        </div>
-
-        <!-- TITLE -->
-        <div class="row">
-          <div class="col-12 my-2">
-            <h1 class="display-4 ft-nasa text-center my-0 text-shadow">We need your help!</h1>
-            <hr class="w-25 mx-auto pb-1 my-2 hr-dark text-shadow"/>
-          </div>
-        </div>
-
-        <!-- MEDIUM GAME CONTAINER -->
-        <div class="d-lg-none">
-          <div class="d-none d-md-block d-lg-none col-12">
-            <p class="lead fs-5 text-wrap">
-              Our Explore NASA astronaut needs to reach the alien to learn more about life on Mars,
-              but they can't do it without you! Use the following JavaScript functions in the code
-              editor below
-              to help them get to the alien.
-            </p>
-          </div>
-          
-          <!-- SKETCH AND JS FUNCS -->
+      <!-- CODING PRACTICE-->
+      <section id="coding" class="container-fluid bg-light py-2">
+        <div class="container">
+          <!-- SIZE HACK -->
           <div class="row">
-            <!-- JS FUNCS -->
-            <div class="col-sm-12 col-md-6 my-sm-2 my-2 my-md-auto my-lg-auto">              
-              <ul class="list-group">
-                <li class="list-group-item"><code>moveUp()</code><br/> move the astronaut 1 box up</li>
-                <li class="list-group-item"><code>moveDown()</code><br/> move the astronaut 1 box down</li>
-                <li class="list-group-item"><code>moveLeft()</code><br/> move the astronaut 1 box left</li>
-                <li class="list-group-item"><code>moveRight()</code><br/> move the astronaut 1 box right</li>
-              </ul>
-            </div>
-            <!-- SKETCH -->
-            <div class="col-sm-12 col-md-6 d-flex align-items-center">
-              <div id="md-sketch-container"></div>
-            </div>            
+            <div id="size-hack" class="col-lg-6 col-md-6"></div>
           </div>
 
-          <!-- ERRORS BUTTON -->
-          <div class="row d-none errors-button">
-            <div class="col-lg-12">
-              <div class="rounded-3 text-center my-2">
-                <button
-                  class="btn btn-danger btn-text-shadow"
-                  data-bs-toggle="modal" data-bs-target="#exampleModalMd"
-                >
-                  Uh oh! Looks like there are some errors. Click here.
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- ERROR MODAL -->
-          <div class="modal fade" id="exampleModalMd" tabindex="-1" aria-labelledby="exampleModalMdLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title ft-nasa" id="exampleModalMdLabel">Errors!</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body bg-danger text-white lead fs-5">
-                  <p id="code-errors"></p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- CODE -->
+          <!-- TITLE -->
           <div class="row">
-            <div class="col-md-12">              
-              <div class="row mx-auto mw-100" style="height: 40vh;">
-                <textarea id="md-code-editor"></textarea>
-              </div>
+            <div class="col-12 my-2">
+              <h1 class="display-4 ft-nasa text-center my-0 text-shadow">We need your help!</h1>
+              <hr class="w-25 mx-auto pb-1 my-2 hr-dark text-shadow"/>
             </div>
           </div>
 
-          <!-- BTN GROUP -->          
-          <div class="row">
-            <div class="col-12">
-              <div class="text-center my-2">
-                <button class="game-btn btn-text-shadow btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select a level!</button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" onclick="loadLVL(0)">Sandbox</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" onclick="loadLVL(1)">Level 1</a></li>
-                  <li><a class="dropdown-item" onclick="loadLVL(2)">Leve 2</a></li>
-                  <li><a class="dropdown-item" onclick="loadLVL(3)">Level 3</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- BTNS -->
-          <div class="row">
-            <div class="col-6">
-              <button class="w-100 btn btn-primary game-btn shadow btn-txt-shadow" onclick="executeCode()">Run Code</button>
-            </div>
-
-            <div class="col-6">
-              <button class="w-100 btn btn-secondary game-btn shadow btn-txt-shadow" onclick="reset()">Reset</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- LARGE GAME CONTAINER -->
-        <div class="d-none d-lg-block">
-
-          <!-- ERRORS BUTTON -->
-          <div class="row d-none errors-button">
-            <div class="col-lg-12">
-              <div class="rounded-3 text-center my-2">
-                <button
-                  class="btn btn-danger btn-text-shadow"
-                  data-bs-toggle="modal" data-bs-target="#exampleModal"
-                >
-                  Uh oh! Looks like there are some errors. Click here.
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- ERROR MODAL -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title ft-nasa" id="exampleModalLabel">Errors!</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body bg-danger text-white lead fs-5">
-                  <p id="code-errors"></p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- EXPLAINER AND JS FUNCS -->
-          <div class="row my-2">
-            <!-- EXPLAINER -->
-            <div class="col-lg-6 my-auto">
-              <p class="lead fs-3 text-wrap">
+          <!-- MEDIUM GAME CONTAINER -->
+          <div class="d-lg-none">
+            <div class="d-none d-md-block d-lg-none col-12">
+              <p class="lead fs-5 text-wrap">
                 Our Explore NASA astronaut needs to reach the alien to learn more about life on Mars,
-                but they can't do it without you! Use the following JavaScript functions in the code editor below
+                but they can't do it without you! Use the following JavaScript functions in the code
+                editor below
                 to help them get to the alien.
               </p>
             </div>
-
-            <!-- JS FUNCS -->
-            <div class="col-lg-6 my-lg-auto">
-              <div class="w-75 mx-auto">
-                <ul class="list-group text-center">
-                  <li class="list-group-item"><code>moveUp()</code>: move the astronaut 1 box up</li>
-                  <li class="list-group-item"><code>moveDown()</code>: move the astronaut 1 box down</li>
-                  <li class="list-group-item"><code>moveLeft()</code>: move the astronaut 1 box left</li>
-                  <li class="list-group-item"><code>moveRight()</code>: move the astronaut 1 box right</li>
+            
+            <!-- SKETCH AND JS FUNCS -->
+            <div class="row">
+              <!-- JS FUNCS -->
+              <div class="col-sm-12 col-md-6 my-sm-2 my-2 my-md-auto my-lg-auto">              
+                <ul class="list-group">
+                  <li class="list-group-item"><code>moveUp()</code><br/> move the astronaut 1 box up</li>
+                  <li class="list-group-item"><code>moveDown()</code><br/> move the astronaut 1 box down</li>
+                  <li class="list-group-item"><code>moveLeft()</code><br/> move the astronaut 1 box left</li>
+                  <li class="list-group-item"><code>moveRight()</code><br/> move the astronaut 1 box right</li>
                 </ul>
               </div>
+              <!-- SKETCH -->
+              <div class="col-sm-12 col-md-6 d-flex align-items-center">
+                <div id="md-sketch-container"></div>
+              </div>            
+            </div>
+
+            <!-- ERRORS BUTTON -->
+            <div class="row d-none errors-button">
+              <div class="col-lg-12">
+                <div class="rounded-3 text-center my-2">
+                  <button
+                    class="btn btn-danger btn-text-shadow"
+                    data-bs-toggle="modal" data-bs-target="#exampleModalMd"
+                  >
+                    Uh oh! Looks like there are some errors. Click here.
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ERROR MODAL -->
+            <div class="modal fade" id="exampleModalMd" tabindex="-1" aria-labelledby="exampleModalMdLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title ft-nasa" id="exampleModalMdLabel">Errors!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body bg-danger text-white lead fs-5">
+                    <p id="code-errors"></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CODE -->
+            <div class="row">
+              <div class="col-md-12">              
+                <div class="row mx-auto mw-100" style="height: 40vh;">
+                  <textarea id="md-code-editor"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- BTN GROUP -->          
+            <div class="row">
+              <div class="col-12">
+                <div class="text-center my-2">
+                  <button class="game-btn btn-text-shadow btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select a level!</button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" onclick="loadLVL(0)">Sandbox</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" onclick="loadLVL(1)">Level 1</a></li>
+                    <li><a class="dropdown-item" onclick="loadLVL(2)">Leve 2</a></li>
+                    <li><a class="dropdown-item" onclick="loadLVL(3)">Level 3</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- BTNS -->
+            <div class="row">
+              <div class="col-6">
+                <button class="w-100 btn btn-primary game-btn shadow btn-txt-shadow" onclick="executeCode()">Run Code</button>
+              </div>
+
+              <div class="col-6">
+                <button class="w-100 btn btn-secondary game-btn shadow btn-txt-shadow" onclick="reset()">Reset</button>
+              </div>
             </div>
           </div>
 
-          <!-- SKETCH AND CODE -->
-          <div class="row">
-            <div class="col-lg-6">
-              <!-- CODE -->
-              <div class="row h-80 mx-auto mw-100">
-                <textarea id="code-editor"></textarea>
+          <!-- LARGE GAME CONTAINER -->
+          <div class="d-none d-lg-block">
+
+            <!-- ERRORS BUTTON -->
+            <div class="row d-none errors-button">
+              <div class="col-lg-12">
+                <div class="rounded-3 text-center my-2">
+                  <button
+                    class="btn btn-danger btn-text-shadow"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  >
+                    Uh oh! Looks like there are some errors. Click here.
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ERROR MODAL -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title ft-nasa" id="exampleModalLabel">Errors!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body bg-danger text-white lead fs-5">
+                    <p id="code-errors"></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- EXPLAINER AND JS FUNCS -->
+            <div class="row my-2">
+              <!-- EXPLAINER -->
+              <div class="col-lg-6 my-auto">
+                <p class="lead fs-3 text-wrap">
+                  Our Explore NASA astronaut needs to reach the alien to learn more about life on Mars,
+                  but they can't do it without you! Use the following JavaScript functions in the code editor below
+                  to help them get to the alien.
+                </p>
               </div>
 
-              <!-- BTNS -->
-              <div class="row h-20">
-                <!-- BTN GROUP -->
-                <div class="row h-50 mx-auto">
-                  <div class="col-12 text-center my-auto">
-                    <div class="btn-group shadow">
-                      <button class="btn btn-dark game-btn btn-txt-shadow" onclick="loadLVL(0)">Sandbox</button>
-                      <button class="btn btn-success game-btn btn-txt-shadow" onclick="loadLVL(1)">Level 1</button>
-                      <button class="btn btn-warning game-btn text-white btn-txt-shadow" onclick="loadLVL(2)">Level 2</button>
-                      <button class="btn btn-danger game-btn btn-txt-shadow" onclick="loadLVL(3)">Level 3</button>
+              <!-- JS FUNCS -->
+              <div class="col-lg-6 my-lg-auto">
+                <div class="w-75 mx-auto">
+                  <ul class="list-group text-center">
+                    <li class="list-group-item"><code>moveUp()</code>: move the astronaut 1 box up</li>
+                    <li class="list-group-item"><code>moveDown()</code>: move the astronaut 1 box down</li>
+                    <li class="list-group-item"><code>moveLeft()</code>: move the astronaut 1 box left</li>
+                    <li class="list-group-item"><code>moveRight()</code>: move the astronaut 1 box right</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- SKETCH AND CODE -->
+            <div class="row">
+              <div class="col-lg-6">
+                <!-- CODE -->
+                <div class="row h-80 mx-auto mw-100">
+                  <textarea id="code-editor"></textarea>
+                </div>
+
+                <!-- BTNS -->
+                <div class="row h-20">
+                  <!-- BTN GROUP -->
+                  <div class="row h-50 mx-auto">
+                    <div class="col-12 text-center my-auto">
+                      <div class="btn-group shadow">
+                        <button class="btn btn-dark game-btn btn-txt-shadow" onclick="loadLVL(0)">Sandbox</button>
+                        <button class="btn btn-success game-btn btn-txt-shadow" onclick="loadLVL(1)">Level 1</button>
+                        <button class="btn btn-warning game-btn text-white btn-txt-shadow" onclick="loadLVL(2)">Level 2</button>
+                        <button class="btn btn-danger game-btn btn-txt-shadow" onclick="loadLVL(3)">Level 3</button>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="row h-50 mx-auto">
-                  <div class="col-6 mb-auto">
-                    <button class="w-100 btn btn-primary game-btn shadow btn-txt-shadow" onclick="executeCode()">Run Code</button>
+                  <div class="row h-50 mx-auto">
+                    <div class="col-6 mb-auto">
+                      <button class="w-100 btn btn-primary game-btn shadow btn-txt-shadow" onclick="executeCode()">Run Code</button>
+                    </div>
+      
+                    <div class="col-6 mb-auto">
+                      <button class="w-100 btn btn-secondary game-btn shadow btn-txt-shadow" onclick="reset()">Reset</button>
+                    </div>
                   </div>
-    
-                  <div class="col-6 mb-auto">
-                    <button class="w-100 btn btn-secondary game-btn shadow btn-txt-shadow" onclick="reset()">Reset</button>
-                  </div>
-                </div>
 
+                </div>
+              </div>
+
+              <!-- SKETCH -->
+              <div class="col-lg-6">
+                <div id="sketch-container"></div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <!-- SKETCH -->
-            <div class="col-lg-6">
-              <div id="sketch-container"></div>
+      <!-- VIDEO PARALLAX -->
+      <section id="gallery" class="vp-container">
+        <video autoplay muted loop>
+          <source src="assets/bg.mp4" type="video/mp4"/>
+        </video>
+        <div class="container h-100">
+          <div class="row h-100">
+            <div class="col-12 my-auto">
+              <h1 class="display-1 ft-nasa text-center my-0 text-shadow text-white">Gallery</h1>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- VIDEO PARALLAX -->
-    <section id="gallery" class="vp-container">
-      <video autoplay muted loop>
-        <source src="assets/bg.mp4" type="video/mp4"/>
-      </video>
-      <div class="container h-100">
-        <div class="row h-100">
-          <div class="col-12 my-auto">
-            <h1 class="display-1 ft-nasa text-center my-0 text-shadow text-white">Gallery</h1>
+      <!-- GALLERY -->
+      <section id="gallery-content" class="container-fluid bg-light py-2">
+        <div class="container">
+          <!-- DATE PICKER -->
+          <div class="row py-2">
+            <div class="col-md-6 col-sm-12 my-auto">
+              <h1 class="display-4 ft-nasa text-center my-0 text-shadow">Check out the APOD!</h1>
+              <hr class="w-25 mx-auto pb-1 my-2 hr-dark text-shadow"/>
+              <p class="lead fs-4 text-wrap">
+                Each day NASA features a new APOD (Astronomy Photo of Day)! Some of NASA's APODs have
+                been taken by Explore NASA participants. What was the APOD on your birthday? 🤔
+              </p>
+            </div>
+            <div class="col-md-6 col-sm-12" id="date-picker-container">
+              <div id="date-picker"></div>
+            </div>
+          </div>
+
+          <!-- APOD -->
+          <div class="row py-2">
+            <div class="col-lg-6 col-md-12 text-center my-lg-auto my-md-2 my-sm-2 my-2">
+              <img id="apod-img" src="" class="img-fluid rounded-3 shadow"/>
+            </div>
+            <div class="col-lg-6 col-md-12 my-lg-auto my-md-2 my-sm-2 my-2">
+              <h1 id="apod-title" class="display-6"></h1>
+              <p id="apod-cr" class="lead text-wrap"></p>
+              <p id="apod-caption" class="lead text-wrap"></p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- GALLERY -->
-    <section id="gallery-content" class="container-fluid bg-light py-2">
-      <div class="container">
-        <div class="row">
-          <div class="col-6" id="date-picker-container">
-            <div id="date-picker"></div>
-          </div>
+      <!-- FOOTER -->
+      <section id="footer" class="container-fluid bg-dark py-2">
+        <div class="container">
+          <footer class="col-12 d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+            <h1 class="text-danger ft-nasa display-6 text-center my-auto">&COPY; EXPLORE NASA INC.</h1>
+        
+            <ul class="nav justify-content-end">
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-white">HOME</a></li>
+              <li class="nav-item"><a href="#about-us" class="nav-link px-2 text-white">ABOUT US</a></li>
+              <li class="nav-item"><a href="#join-us" class="nav-link px-2 text-white">JOIN THE MISSION</a></li>
+              <li class="nav-item"><a href="#coding" class="nav-link px-2 text-white">CODING CHALLENGE</a></li>
+              <li class="nav-item"><a href="#gallery" class="nav-link px-2 text-white">GALLERY</a></li>
+            </ul>
+          </footer>
         </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <section id="footer" class="container-fluid bg-dark py-2">
-      <div class="container">
-        <footer class="col-12 d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
-          <h1 class="text-danger ft-nasa display-6 text-center my-auto">&COPY; EXPLORE NASA INC.</h1>
-      
-          <ul class="nav justify-content-end">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">HOME</a></li>
-            <li class="nav-item"><a href="#about-us" class="nav-link px-2 text-white">ABOUT US</a></li>
-            <li class="nav-item"><a href="#join-us" class="nav-link px-2 text-white">JOIN THE MISSION</a></li>
-            <li class="nav-item"><a href="#coding" class="nav-link px-2 text-white">CODING CHALLENGE</a></li>
-            <li class="nav-item"><a href="#gallery" class="nav-link px-2 text-white">GALLERY</a></li>
-          </ul>
-        </footer>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <!-- LOAD SCRIPTS -->
     <div>
