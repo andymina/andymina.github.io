@@ -73,27 +73,39 @@ const createCodeMirror = (selector) => {
 
 let oldWindowSize = window.innerWidth;
 window.onresize = () => {
-  // lg window gets resized to md
-  if (window.innerWidth < 992 && oldWindowSize >= 992) {
+  let newPrefix;
+  let oldPrefix;
+  let resize = false;
+
+  if (window.innerWidth < 992 && oldWindowSize >= 992) { // lg -> md
+    newPrefix = "#md-";
+    oldPrefix = "#"
+    resize = true;
+  } else if (window.innerWidth >= 992 && oldWindowSize < 992) { // md -> lg
+    newPrefix = "#";
+    prefix = "#md-";
+    resize = true;
+  }
+
+  // only run if we've hit the bp
+  if (resize) {
     // store code
     let code = editor.getValue();
     // remove old CodeMirror
     $(".CodeMirror").remove();
     // create new codeMirror
-    editor = createCodeMirror("#md-code-editor");
+    editor = createCodeMirror(newPrefix + "code-editor");
     // add code
     editor.setValue(code);
-    oldWindowSize = window.innerWidth;
-  } else if (window.innerWidth >= 992 && oldWindowSize < 992) {
-    // md window gets resized to lg
-    // store code
-    let code = editor.getValue();
-    // remove old CodeMirror
-    $(".CodeMirror").remove();
-    // create new codeMirror
-    editor = createCodeMirror("#code-editor");
-    // add code
-    editor.setValue(code);
+
+    // store old errors
+    let errs = $(oldPrefix + "code-errors").text();
+    // clear old errors
+    $(oldPrefix+"code-errors").text("");
+    // move errors
+    $(newPrefix+"code-errors").text(errs);
+
+    // update old window size
     oldWindowSize = window.innerWidth;
   }
 }
@@ -103,8 +115,9 @@ const executeCode = () => {
   try {
     window.Function(`"use strict";${editor.getValue()};game.resetPlayer();game.disableButtons(true);loop();`)();
   } catch (err) {
+    let selector = window.innerWidth < 992 ? "#md-code-errors" : "#code-errors";
     showErrors(true);
-    $("#code-errors").text(err);
+    $(selector).text(err);
   }
 }
 
