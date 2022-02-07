@@ -4,6 +4,7 @@ $(document).ready(() => {
   // init editor
   let selector = window.innerWidth < 992 ? "#md-code-editor" : "#code-editor";
   editor = createCodeMirror(selector);
+  editor.refresh();
 
   let today = new Date();
   let tmrw = new Date();
